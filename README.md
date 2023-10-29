@@ -41,7 +41,7 @@ The objective of the model is to classify the recordings into the following emot
 **How to use the code inside this repository**
 
 1) To install this repository, please use this command:
- ```git clone https://github.com/marcogdepinto/Emotion-Classification-Ravdess.git ``` 
+ ```git clone https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models.git ```
 
 2) Use ```pip install -r requirements.txt``` to install the required libraries.
 
