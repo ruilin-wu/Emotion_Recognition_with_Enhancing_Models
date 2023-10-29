@@ -47,11 +47,11 @@ The objective of the model is to classify the recordings into the following emot
 
 3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to ```features\Actor_25``` and ```features\Actor_26```. These files already exist in the Actor_25 and Actor_26 folders of this project.
 
-4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files
+4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files.
 
 5) Use command ```python neural_network.py``` to load the .joblib file and use machine learning architecture to train H5 model.
 
-6) Use command ```python live_predictions.py``` to use the pre-trained H5 model to perform emotion recognition on real-time audio files
+6) Use command ```python live_predictions.py``` to use the pre-trained H5 model to perform emotion recognition on real-time audio files.
     
 *Prediction results*
 
@@ -64,50 +64,29 @@ The objective of the model is to classify the recordings into the following emot
 ![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/model_project.png) 
 
 
+**SUMMARY Of The PROJECT**
+
+For more detailed analysis, please refer to the project report that comes with the project, but the best model trained in this project uses the following parameters: (1) In RAVDESS, we used song subset; (2) Among various features, this project chose MFCC Instead of other features; (3) In neural_network.py, this project provides four different models. Finally, it was found that the improved CNN model has the best effect. Readers can test the performance of other models at will.
+
+
+
+
 **APPENDIX 1: The RAVDESS dataset**
 
-*Download*
-
-The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) can be downloaded free of charge at https://zenodo.org/record/1188976. 
-
-*Construction and Validation*
-
-Construction and validation of the RAVDESS is described in our paper: Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391. https://doi.org/10.1371/journal.pone.0196391.
-
-The RAVDESS contains 7356 files. Each file was rated 10 times on emotional validity, intensity, and genuineness. Ratings were provided by 247 individuals who were characteristic of untrained adult research participants from North America. A further set of 72 participants provided test-retest data. High levels of emotional validity, interrater reliability, and test-retest intrarater reliability were reported. Validation data is open-access, and can be downloaded along with our paper from PLOS ONE.
-
-**Description**
-
-The dataset contains the complete set of 7356 RAVDESS files (total size: 24.8 GB). Each of the 24 actors consists of three modality formats: Audio-only (16bit, 48kHz .wav), Audio-Video (720p H.264, AAC 48kHz, .mp4), and Video-only (no sound).  Note, there are no song files for Actor_18.
-
-**License information**
-
-“The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)” by Livingstone & Russo is licensed under CC BY-NA-SC 4.0.
-
-*File naming convention*
-
-Each of the 7356 RAVDESS files has a unique filename. The filename consists of a 7-part numerical identifier (e.g., 02-01-06-01-02-01-12.mp4). These identifiers define the stimulus characteristics:
-
-Filename identifiers 
-
-- Modality (01 = full-AV, 02 = video-only, 03 = audio-only).
-- Vocal channel (01 = speech, 02 = song).
-- Emotion (01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised).
-- Emotional intensity (01 = normal, 02 = strong). NOTE: There is no strong intensity for the ‘neutral’ emotion.
-- Statement (01 = “Kids are talking by the door”, 02 = “Dogs are sitting by the door”).
-- Repetition (01 = 1st repetition, 02 = 2nd repetition).
-- Actor (01 to 24. Odd numbered actors are male, even numbered actors are female).
-
-*Filename example: 02-01-06-01-02-01-12.mp4*
-
-- Video-only (02)
-- Speech (01)
-- Fearful (06)
-- Normal intensity (01)
-- Statement “dogs” (02)
-- 1st Repetition (01)
-- 12th Actor (12)
-- Female, as the actor ID number is even.
+Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391. https://doi.org/10.1371/journal.pone.0196391.
+```
+@article{RAVDESS_2018,
+author = {Livingstone SR, Russo FA},
+journal = {PLoS ONE},
+title = "{The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English}",
+year = {2018},
+volume = {13},
+issue = {5},
+pages = {e0196391},
+doi = {10.1371/journal.pone.0196391},
+url = {https://doi.org/10.1371/journal.pone.0196391}
+}
+```
 
 **APPENDIX 2: The TESS dataset**
 
@@ -125,10 +104,9 @@ url = {https://doi.org/10.5683/SP2/E8H2MF}
 }
 ```
 
-**APPENDIX 3: Cite this work**
+**APPENDIX 3: M. G. de Pinto's Work**
 
-The paper referred to below uses only the RAVDESS dataset. On the other hand, this github repository includes an updated version of the model that uses the TESS dataset and a different model architecture.
-
+M. G. de Pinto, “Audio Emotion Classification from Multiple Datasets,” GitHub, Oct. 22, 2023. https://github.com/marcogdepinto/emotion-classification-from-audio-files (accessed Oct. 28, 2023).
 ```
 @INPROCEEDINGS{9122698,
 author={M. G. {de Pinto} and M. {Polignano} and P. {Lops} and G. {Semeraro}},
