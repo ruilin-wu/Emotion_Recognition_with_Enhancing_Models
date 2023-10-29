@@ -62,14 +62,15 @@ class LivePredictions:
 
 if __name__ == '__main__':
     # Instantiate the class and make live predictions
-    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '03-01-01-01-01-02-05.wav'))
+    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '03-02-01-01-01-01-11.wav'))# Neutral
     live_prediction.loaded_model.summary()  # Print model summary
     live_prediction.make_predictions()  # Make predictions
     
-    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '10-16-07-29-82-30-63.wav'))
-    live_prediction.make_predictions()  # Predict on another file
-    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '10-24-05-27-69-98-83.wav'))
+    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '03-02-04-01-01-01-21.wav'))# Sad
     live_prediction.make_predictions()  # Predict on another file
     
-    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '13-23-03-84-55-72-54.wav'))
+    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '03-02-05-02-01-02-12.wav'))# Angry
+    live_prediction.make_predictions()  # Predict on another file
+    
+    live_prediction = LivePredictions(file=os.path.join(EXAMPLES_PATH, '03-02-06-02-02-01-15.wav'))# Feardul
     live_prediction.make_predictions()  # Predict on another file
