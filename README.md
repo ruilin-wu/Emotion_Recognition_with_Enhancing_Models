@@ -22,17 +22,17 @@ The objective of the model is to classify the recordings into the following emot
 
 *Model summary*
 
-![Link to model](https://github.com/marcogdepinto/Emotion-Classification-Ravdess/blob/master/media/model.png) 
+![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/model_project.png) 
 
 *Loss and accuracy plots*
 
-![Link to loss](https://github.com/marcogdepinto/Emotion-Classification-Ravdess/blob/master/media/loss.png) 
+![Link to loss](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/loss.png) 
 
-![Link to accuracy](https://github.com/marcogdepinto/Emotion-Classification-Ravdess/blob/master/media/accuracy.png)
+![Link to accuracy](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/accuracy.png)
 
 *Classification report*
 
-![Link do classification report](https://github.com/marcogdepinto/Emotion-Classification-Ravdess/blob/master/media/ClassificationReport.png)
+![Link do classification report](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/classification report.png)
 
 *Confusion matrix*
 
