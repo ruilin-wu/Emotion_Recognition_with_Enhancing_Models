@@ -45,56 +45,24 @@ The objective of the model is to classify the recordings into the following emot
 
 2) Use ```pip install -r requirements.txt``` to install the required libraries.
 
-3) The structure and functions of the code are as follows
-```config.py```: parameter configuration file
-```tess_pipeline.py```: Automatically process audio files so that they conform to a specific naming and organizational structure in preparation for subsequent data loading and model training steps.
-```create_features.py```: Extract MFCCs from each file and save them as .joblib files
-```neural_network.py```: Load the .joblib file and use CNN architecture to train model H5
-```live_predictions.py```: Use the pre-trained model H5 to perform emotion recognition on real-time audio files 
-```plot_model.py```: Load the trained model H5, draw and save the structure diagram of the model 
-
 3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to ```features\Actor_25``` and ```features\Actor_26```. These files already exist in the Actor_25 and Actor_26 folders of this project.
 
-3) Use command ```python create_features.py``` to rename the files in the TESS database and send them to features\Actor_25 and features\Actor_26. These files already exist in the Actor_25 and Actor_26 folders of this project.
+4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files
 
-3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to features\Actor_25 and features\Actor_26. These files already exist in the Actor_25 and Actor_26 folders of this project.
+5) Use command ```python neural_network.py``` to load the .joblib file and use machine learning architecture to train H5 model.
 
-3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to features\Actor_25 and features\Actor_26. These files already exist in the Actor_25 and Actor_26 folders of this project.
+6) Use command ```python live_predictions.py``` to use the pre-trained H5 model to perform emotion recognition on real-time audio files
+    
+*Prediction results*
 
-3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to features\Actor_25 and features\Actor_26. These files already exist in the Actor_25 and Actor_26 folders of this project.
+![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/prediction_results.png) 
 
-2) *OPTIONAL*: Download Audio_Song_Actors_01-24.zip and Audio_Speech_Actors_01-24.zip, unzip and merge the content of the folders (e.g. Actor_01 should include both Speech and Song) and then add it to the ```features``` folder.
+7) Use command ```python plot_model.py``` to load the trained H5 model, draw and save the structure diagram of the model .
 
-2) *OPTIONAL*: Create two empty folders, ```Actor_25``` and ```Actor_26```, into the ```features``` folder.
+*Model summary*
 
-3) *OPTIONAL*: Download the TESS dataset and unzip it into the ```TESS_Toronto_emotional_speech_set_data``` folder.
-The format you need to have to make the following steps work is:
+![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/model_project.png) 
 
-    ```
-    TESS_Toronto_emotional_speech_set_data
-    --OAF_angry
-    --OAF_disgust
-    --Other Folders..
-    ```
-4) *OPTIONAL*: Run ```tess_pipeline.py```: this will copy the files in the ```Actor_25``` and ```Actor_26``` folders with a usable naming convention. For details, read the docstrings of ```tess_pipeline.py```.
-
-6) *ONLY IF YOU WANT TO CREATE NEW FEATURES*: run ```create_features.py```. Please note this is NOT necessary as in the ```features``` folder there are already the joblib files created with ```create_features.py```.
-
-7) *ONLY IF YOU WANT TO CREATE A NEW MODEL*:  run ```neural_network.py```. Please note this is NOT necessary as in the ```model``` folder there is already a pre_trained model to use.
-
-**How to test the model created in this work**
-
-Let's be clear. When we talk about emotions understanding, we are talking about a very difficult task. 
-
-I have pasted two files in the ```examples``` folder:
-
-a) 03-01-01-01-01-02-05.wav is an example of WRONG prediction: it is a NEUTRAL file, the model predicts CALM. Try to listen to the audio yourself. Which is the emotion for you? For me CALM seems a fair prediction. That speaker is classified as neutral, but he is not angry at all. You see my point?
-
-b) 10-16-07-29-82-30-63.wav is a DISGUST file. The model is getting it.
-
-Feel free to try with other files or record your voice. I still have to try this last one but I am very curious about the result.
-
-*Important note*: the classes are encoded from 0 to 7 in the code. In the dataset, from 01 to 08. Be aware when you try. If the model predicts 0 and you are using a NEUTRAL file (01), this is correct and the expected behavior. Keras wants the predictions to start from 0 and not from 1, so the code is adjusted to cope with this requirement.
 
 **APPENDIX 1: The RAVDESS dataset**
 
