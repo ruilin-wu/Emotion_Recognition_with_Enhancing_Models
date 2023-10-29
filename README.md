@@ -32,11 +32,11 @@ The objective of the model is to classify the recordings into the following emot
 
 *Classification report*
 
-![Link do classification report](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/classification report.png)
+![Link do classification report](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/classification_report1.png)
 
 *Confusion matrix*
 
-![Link do classification report](https://github.com/marcogdepinto/Emotion-Classification-Ravdess/blob/master/media/ConfusionMatrix.png)
+![Link do classification report](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/confusion_matrix.png)
 
 **How to use the code inside this repository**
 
