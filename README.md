@@ -76,6 +76,22 @@ For more detailed analysis, please refer to the project report that comes with t
 **APPENDIX 1: The RAVDESS dataset**
 
 Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391. https://doi.org/10.1371/journal.pone.0196391.
+
+*Filename identifiers*
+
+Modality (01 = full-AV, 02 = video-only, 03 = audio-only).
+
+Vocal channel (01 = speech, 02 = song).
+
+Emotion (01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised).
+
+Emotional intensity (01 = normal, 02 = strong). NOTE: There is no strong intensity for the ‘neutral’ emotion.
+
+Statement (01 = “Kids are talking by the door”, 02 = “Dogs are sitting by the door”).
+
+Repetition (01 = 1st repetition, 02 = 2nd repetition).
+
+Actor (01 to 24. Odd numbered actors are male, even numbered actors are female).
 ```
 @article{RAVDESS_2018,
 author = {Livingstone SR, Russo FA},
