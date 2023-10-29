@@ -45,7 +45,7 @@ The objective of the model is to classify the recordings into the following emot
 
 2) Use ```pip install -r requirements.txt``` to install the required libraries.
 
-3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to ```features\Actor_25``` and ```features\Actor_26```. These files already exist in the Actor_25 and Actor_26 folders of this project.
+3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to ```features\Actor_25``` and ```features\Actor_26```. Please do not run this script beacuse these files already exist in the Actor_25 and Actor_26 folders of this project.
 
 4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files. In addition to feature MFCC, there are three other feature extraction methods in create_features.py: chroma, contrast and the combination of MFCC, chroma, and contrast.
 
