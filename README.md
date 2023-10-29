@@ -56,7 +56,7 @@ The objective of the model is to classify the recordings into the following emot
     
 *Prediction results*
 
-![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/prediction_results.png) 
+![Link to model](https://github.com/ruilin-wu/Emotion_Recognition_with_Enhancing_Models/blob/main/media/prediction_result.png) 
 
 
 7) Use command ```python plot_model.py``` to load the trained H5 model, draw and save the structure diagram of the model .
