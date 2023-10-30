@@ -47,10 +47,10 @@ The objective of the model is to classify the recordings into the following emot
 
 3) Use command ```python tess_pipeline.py``` to rename the files in the TESS database and send them to ```features\Actor_25``` and ```features\Actor_26```. Please do not run this script beacuse these files already exist in the Actor_25 and Actor_26 folders of this project.
 
-4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files. In addition to feature MFCC, there are three other feature extraction methods in create_features.py: chroma, contrast and the combination of MFCC, chroma, and contrast.
+4) Use command ```python create_features.py``` to extract MFCCs from each file and save them as .joblib files. In addition to feature MFCC, there are three other feature extraction methods in ```create_features.py```: chroma, contrast and the combination of MFCC, chroma, and contrast.
 
 5) Use command ```python neural_network.py``` to load the .joblib file and use machine learning architecture to train H5 model. And 
- neural_network.py proposes four models, and this project found that the best model is the Improved CNN model.
+ ```neural_network.py``` proposes four models, and this project found that the best model is the Improved CNN model.
 
 6) Use command ```python live_predictions.py``` to use the pre-trained H5 model to perform emotion recognition on real-time audio files.
     
@@ -68,7 +68,7 @@ The objective of the model is to classify the recordings into the following emot
 
 **SUMMARY Of The PROJECT**
 
-For more detailed analysis, please refer to the project report that comes with the project, but the best model trained in this project uses the following parameters: (1) In RAVDESS, we used song subset; (2) Among various features, this project chose MFCC Instead of other features; (3) In neural_network.py, this project provides four different models. Finally, it was found that the improved CNN model has the best effect. Readers can test the performance of other models at will.
+For more detailed analysis, please refer to the project report that comes with the project, but the best model trained in this project uses the following parameters: (1) In RAVDESS, we used song subset; (2) Among various features, this project chose MFCC Instead of other features; (3) In ```neural_network.py```, this project provides four different models. Finally, it was found that the improved CNN model has the best effect. Readers can test the performance of other models at will.
 
 
 
