@@ -1,4 +1,4 @@
-# Emotion Classification With Enhancing Models
+# Emotion Recognition With Enhancing Models
 
 **Introduction**
 
